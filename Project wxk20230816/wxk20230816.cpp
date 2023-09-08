@@ -1214,28 +1214,44 @@ int main() {
 //    return 0;
 //}
 
+//int main()
+//{
+//    int a = 0, b = 0, c = 0;
+//    scanf("%d %d %d", &a, &b, &c);
+//    if ((a + b) > c && (b + c) > a && (a + c) > b)
+//    {
+//        if (a == b && b == c)
+//        {
+//            printf("等边三角形！");
+//        }
+//        else if (a == b || b == c || c == a)
+//        {
+//            printf("等腰三角形！");
+//        }
+//        else
+//        {
+//            printf("普通三角形！");
+//        }
+//    }
+//    else
+//    {
+//        printf("不是三角形！");
+//    }
+//    return 0;
+//}
+
 int main()
 {
-    int a = 0, b = 0, c = 0;
-    scanf("%d %d %d", &a, &b, &c);
-    if ((a + b) > c && (b + c) > a && (a + c) > b)
+    int arr[] = { 1,2,3,4,5, };
+    short* p = (short*)arr;
+    int i = 0;
+    for (i = 0; i < 4; i++)
     {
-        if (a == b && b == c)
-        {
-            printf("等边三角形！");
-        }
-        else if (a == b || b == c || c == a)
-        {
-            printf("等腰三角形！");
-        }
-        else
-        {
-            printf("普通三角形！");
-        }
+        *(p + i) = 0;
     }
-    else
+    for (i = 0; i < 5; i++)
     {
-        printf("不是三角形！");
+        printf("%d ", arr[i]);
     }
     return 0;
 }
