@@ -1,0 +1,8 @@
+﻿  game.c
+  test.c
+D:\code2023\三子棋\test.c(26,3): warning C4013: “dispalyboard”未定义；假设外部返回 int
+  正在生成代码...
+test.obj : error LNK2019: 无法解析的外部符号 _playermove，函数 _game 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _computermove，函数 _game 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _dispalyboard，函数 _game 中引用了该符号
+D:\code2023\三子棋\Debug\三子棋.exe : fatal error LNK1120: 3 个无法解析的外部命令

@@ -1,0 +1,3 @@
+﻿  wxk20230816.cpp
+D:\code2023\Project wxk20230816\wxk20230816.cpp(612,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Project wxk20230816.vcxproj -> D:\code2023\Project wxk20230816\x64\Debug\Project wxk20230816.exe
