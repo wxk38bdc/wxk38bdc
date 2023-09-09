@@ -126,17 +126,112 @@
 
 //喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，20元可以获得多少汽水
 
+//int main()
+//{
+//	int money = 0;
+//	scanf("%d", &money);
+//	int total = money;
+//	int empty = money;
+//	while (empty >= 2)
+//	{
+//		total += empty / 2;
+//		empty = empty / 2 + empty % 2;
+//	}
+//	printf("%d\n", total);
+//	return 0;
+//}
+
+//计算for循环的执行次数
+//int main()
+//{
+//	int count = 0;
+//	int x = 0; int y = 0;
+//	for (x = 0, y = 0; (y = 123) && (x < 4); x++)
+//	{
+//		count++;
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+//最小公倍数lcm,最大公约数gcd
+//利用“更相减损术”求最大公约数
+//int com_gcd(int a, int b);
+//{
+//	while((a!=c)&&(b!=c))
+//	{
+//		int c = (a > b) ? (a - b) : (b - a);
+//		if (a > b)
+//		{
+//			a = c;
+//		}
+//		else
+//		{
+//			b = c;
+//		}
+//	}
+//	return(a == c) ? a : b;
+//}
+//利用一般方法求最大公约数
+//int com_gcd(int a, int b);
+//{
+//	
+//}
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	int c = (a > b) ? b : a;
+//	while (a % c != 0 || b % c != 0)
+//	{
+//		c--;
+//	}
+//	
+//	//int gcd=com_gcd(a, b);
+//	printf("%d\n", a*b/c);
+//	return 0;
+//}
+
+#include<string.h>
+//倒置字符串问题：将一句话的单词进行倒置，标点不倒置
+void reverse(char* left, char* right)
+{
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+}
 int main()
 {
-	int money = 0;
-	scanf("%d", &money);
-	int total = money;
-	int empty = money;
-	while (empty >= 2)
+	char arr[101] = { 0 };
+	//input
+	gets(arr);
+	//reverse
+	int len = strlen(arr);
+	//1.all
+	reverse(arr, arr + len - 1);
+	//2.each word
+	char* start = arr;
+	while (*start)
 	{
-		total += empty / 2;
-		empty = empty / 2 + empty % 2;
+		char* end = start;
+		while (*end != ' '&&*end!='\0')
+		{
+			end++;
+		}
+		reverse(start, end - 1);
+		if (*end != '\0')
+		{
+			end++;
+		}
+		start = end;
 	}
-	printf("%d\n", total);
+	//output
+	printf("%s\n", arr);
 	return 0;
 }

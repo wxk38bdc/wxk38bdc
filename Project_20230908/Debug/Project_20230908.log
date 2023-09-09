@@ -1,2 +1,3 @@
 ﻿  test.c
+D:\code2023\c-learning\Project_20230908\test.c(213,2): warning C4013: “gets”未定义；假设外部返回 int
   Project_20230908.vcxproj -> D:\code2023\c-learning\Project_20230908\Debug\Project_20230908.exe
