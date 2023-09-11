@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
+#include<windows.h>
 
 //int main()
 //{
@@ -46,8 +47,100 @@
 //	return 0;
 //}
 
-int main()
-{
+//int main()
+//{
+//	unsigned int i;
+//	for (i = 9; i >= 0; i--)
+//	{
+//		printf("%u\n", i);//i=0 -> i=4294967295
+//	}
+//	return 0;
+//}
 
+//int main()
+//{
+//	char a[1000];
+//	int i;
+//	for (i = 0; i < 1000; i++)
+//	{
+//		a[i] = -1 - i;
+//	}
+//	printf("%d\n", strlen(a));//255
+////strlen是求字符串的长度，关注的是字符串中'\0'（数字0）之前出现多少字符
+//	return 0;
+//}
+
+//输入整数数组，实现一个函数，调整奇数位于偶数之前
+//思路：在函数中创建3个数组，1个放奇数，1个放偶数，1个输出
+// 写的像shit mountains，但终究是写出来了
+//
+//int main()
+//{
+//	int arr[9] = { 1,3,5,7,9,11,13,15,17};
+//	int arr1[10] = { 0 };
+//	int arr2[10] = { 0 };
+//	int i = 0;
+//	int j = 0;
+//	int k = 0;
+//	for (i = 0; i < 9; i++)
+//	{
+//		if (arr[i] % 2 == 1)
+//		{
+//			arr1[j] = arr[i];
+//			j++;
+//		}
+//		else if (arr[i] % 2 == 0)
+//		{
+//			arr2[k] = arr[i];
+//			k++;
+//		}
+//	}
+//	int j1 = j;
+//	for (i = 0,j=0; i < j1; i++,j++)
+//	{
+//		arr[i] = arr1[j];
+//	}
+//	for (i = j,k=0; i < 9; i++,k++)
+//	{
+//		arr[i] = arr2[k];
+//	}
+//	for (i = 0; i < 9; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+
+//升序排列数组
+//怎么优化？
+int main() 
+{
+	int arr[10] = { 0 };
+	int i = 0;
+	int j = sizeof(arr) / sizeof(arr[0]);
+	//输入
+	for (i = 0; i < j; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	//调整
+	while (((arr[0]<=arr[1])&& (arr[1] <= arr[2])&& (arr[2] <= arr[3])&& (arr[3] <= arr[4])&& (arr[4] <= arr[5])&& (arr[5] <= arr[6])&& (arr[6] <= arr[7])&& (arr[7] <= arr[8])&& (arr[8] <= arr[9]))!=1)
+	{
+		for (i = 0; i < j-1; i++)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				int tmp = arr[i + 1];
+				arr[i + 1] = arr[i];
+				arr[i] = tmp;
+			}
+		}
+	}
+	//打印
+	for (i = 0; i <j; i++)
+	{
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }
