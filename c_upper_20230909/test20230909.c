@@ -183,39 +183,54 @@
 //}
 
 //打印二维数组
-void print1(int arr[3][5], int r, int c)
+//void print1(int arr[3][5], int r, int c)
+//{
+//	int i = 0;
+//	for (i = 0; i < r; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < c; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+////数组指针正确用法
+//void print2(int (*p)[5], int r, int c)
+//{
+//	int i = 0;
+//	for (i = 0; i < r; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < c; j++)
+//		{
+//			//printf("%d ", *(*(p + i) + j));//第一种写法
+//			printf("%d ", p[i][j]);//第2种写法
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int arr[3][5] = { 1,2,3,5,6,9,8,7,5,4,1,0,2,3,6 };
+//	//print1(arr, 3, 5);
+//	print2(arr, 3, 5);//arr指首元素（第一行）的地址，因为是二维数组
+//	return 0;
+//}
+
+//函数指针
+int test(const char* str)
 {
-	int i = 0;
-	for (i = 0; i < r; i++)
-	{
-		int j = 0;
-		for (j = 0; j < c; j++)
-		{
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	}
-}
-//数组指针正确用法
-void print2(int (*p)[5], int r, int c)
-{
-	int i = 0;
-	for (i = 0; i < r; i++)
-	{
-		int j = 0;
-		for (j = 0; j < c; j++)
-		{
-			//printf("%d ", *(*(p + i) + j));//第一种写法
-			printf("%d ", p[i][j]);//第2种写法
-		}
-		printf("\n");
-	}
+	printf("ok\n");
+	return 0;
 }
 int main()
 {
-	int arr[3][5] = { 1,2,3,5,6,9,8,7,5,4,1,0,2,3,6 };
-	//print1(arr, 3, 5);
-	print2(arr, 3, 5);//arr指首元素（第一行）的地址，因为是二维数组
+	//int (*pf)(const char*) = test;//两种写法均可
+	int (*pf)(const char*) = &test;
+	(*pf)("abc");
+	pf("abc");
+	test("abc");
 	return 0;
 }
-
