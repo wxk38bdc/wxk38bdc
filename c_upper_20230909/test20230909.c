@@ -114,33 +114,108 @@
 
 //升序排列数组
 //怎么优化？
-int main() 
+//int main() 
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	int j = sizeof(arr) / sizeof(arr[0]);
+//	//输入
+//	for (i = 0; i < j; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	//调整
+//	while (((arr[0]<=arr[1])&& (arr[1] <= arr[2])&& (arr[2] <= arr[3])&& (arr[3] <= arr[4])&& (arr[4] <= arr[5])&& (arr[5] <= arr[6])&& (arr[6] <= arr[7])&& (arr[7] <= arr[8])&& (arr[8] <= arr[9]))!=1)
+//	{
+//		for (i = 0; i < j-1; i++)
+//		{
+//			if (arr[i] > arr[i + 1])
+//			{
+//				int tmp = arr[i + 1];
+//				arr[i + 1] = arr[i];
+//				arr[i] = tmp;
+//			}
+//		}
+//	}
+//	//打印
+//	for (i = 0; i <j; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+//指针数组的学习
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 2,3,4,5,6 };
+//	int arr3[] = { 3,4,5,6,7 };
+//	int* parr[3] = { arr1,arr2,arr3 };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 5; j++)
+//		{
+//			//printf("%d ", parr[i][j]);//注意： *(p+i)<=>p[i],并且*(p[i]+j)<=>p[i][j]
+//			printf("%d ", *(parr[i]+j));
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//数组指针
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//int(*p)[10] = &arr;
+//	int* q = arr;
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		//printf("%d ", *(*p + i));//使用起来很别扭
+//		printf("%d ", *(q + i));//正常字符指针的用法
+//	}
+//	return 0;
+//}
+
+//打印二维数组
+void print1(int arr[3][5], int r, int c)
 {
-	int arr[10] = { 0 };
 	int i = 0;
-	int j = sizeof(arr) / sizeof(arr[0]);
-	//输入
-	for (i = 0; i < j; i++)
+	for (i = 0; i < r; i++)
 	{
-		scanf("%d", &arr[i]);
-	}
-	//调整
-	while (((arr[0]<=arr[1])&& (arr[1] <= arr[2])&& (arr[2] <= arr[3])&& (arr[3] <= arr[4])&& (arr[4] <= arr[5])&& (arr[5] <= arr[6])&& (arr[6] <= arr[7])&& (arr[7] <= arr[8])&& (arr[8] <= arr[9]))!=1)
-	{
-		for (i = 0; i < j-1; i++)
+		int j = 0;
+		for (j = 0; j < c; j++)
 		{
-			if (arr[i] > arr[i + 1])
-			{
-				int tmp = arr[i + 1];
-				arr[i + 1] = arr[i];
-				arr[i] = tmp;
-			}
+			printf("%d ", arr[i][j]);
 		}
+		printf("\n");
 	}
-	//打印
-	for (i = 0; i <j; i++)
+}
+//数组指针正确用法
+void print2(int (*p)[5], int r, int c)
+{
+	int i = 0;
+	for (i = 0; i < r; i++)
 	{
-		printf("%d ", arr[i]);
+		int j = 0;
+		for (j = 0; j < c; j++)
+		{
+			//printf("%d ", *(*(p + i) + j));//第一种写法
+			printf("%d ", p[i][j]);//第2种写法
+		}
+		printf("\n");
 	}
+}
+int main()
+{
+	int arr[3][5] = { 1,2,3,5,6,9,8,7,5,4,1,0,2,3,6 };
+	//print1(arr, 3, 5);
+	print2(arr, 3, 5);//arr指首元素（第一行）的地址，因为是二维数组
 	return 0;
 }
+
