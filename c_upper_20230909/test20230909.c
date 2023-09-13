@@ -220,17 +220,88 @@
 //}
 
 //函数指针
-int test(const char* str)
+//int test(const char* str)
+//{
+//	printf("ok\n");
+//	return 0;
+//}
+//int main()
+//{
+//	//int (*pf)(const char*) = test;//两种写法均可
+//	int (*pf)(const char*) = &test;
+//	(*pf)("abc");
+//	pf("abc");
+//	test("abc");
+//	return 0;
+//}
+
+//int main()
+//{
+//	(*(void (*)())0)();//无法调试
+//	return 0;
+//}
+
+//实现计算器功能：加减乘除
+void menu()
 {
-	printf("ok\n");
-	return 0;
+	printf("1.Add 2.Minus 3.Multiply 4.Division 0.exit\n");
+}
+int Add(int x, int y)
+{
+	return x + y;
+}
+int Sub(int x, int y)
+{
+	return x - y;
+}
+int Mul(int x, int y)
+{
+	return x * y;
+}
+int Div(int x, int y)
+{
+	return x / y;
+}
+//计算函数
+void calc(int(*pf)(int, int))
+{
+	int x = 0;
+	int y = 0;
+	int ret = 0;
+	printf("请输入2个整数：\n");
+	scanf("%d %d", &x, &y);
+	ret = pf(x, y);
+	printf("结果是：%d\n", ret);
 }
 int main()
 {
-	//int (*pf)(const char*) = test;//两种写法均可
-	int (*pf)(const char*) = &test;
-	(*pf)("abc");
-	pf("abc");
-	test("abc");
+	int input = 0;
+	do
+	{
+		menu();
+		printf("请选择：");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			calc(Add);
+			break;
+		case 2:
+			calc(Sub);
+			break;
+		case 3:
+			calc(Mul);
+			break;
+		case 4:
+			calc(Div);
+			break;
+		case 0:
+			printf("退出程序\n");
+			break;
+		default:
+			printf("输入错误\n");
+			break;
+		}
+	} while (input);
 	return 0;
 }
