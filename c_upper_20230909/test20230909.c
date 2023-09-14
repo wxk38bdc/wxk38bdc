@@ -242,66 +242,156 @@
 //}
 
 //实现计算器功能：加减乘除
-void menu()
+//void menu()
+//{
+//	printf("1.Add 2.Minus 3.Multiply 4.Division 0.exit\n");
+//}
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+////计算函数
+//void calc(int(*pf)(int, int))
+//{
+//	int x = 0;
+//	int y = 0;
+//	int ret = 0;
+//	printf("请输入2个整数：\n");
+//	scanf("%d %d", &x, &y);
+//	ret = pf(x, y);
+//	printf("结果是：%d\n", ret);
+//}
+//int main()
+//{
+//	int input = 0;
+//	do
+//	{
+//		menu();
+//		printf("请选择：");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			calc(Add);
+//			break;
+//		case 2:
+//			calc(Sub);
+//			break;
+//		case 3:
+//			calc(Mul);
+//			break;
+//		case 4:
+//			calc(Div);
+//			break;
+//		case 0:
+//			printf("退出程序\n");
+//			break;
+//		default:
+//			printf("输入错误\n");
+//			break;
+//		}
+//	} while (input);
+//	return 0;
+//}
+
+//void menu()
+//{
+//	printf("1.Add 2.Minus 3.Multiply 4.Division 0.exit\n");
+//}
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+//int main()
+//{
+//	int input = 0;
+//	int x = 0;
+//	int y = 0;
+//	int ret = 0;
+//	int (*parr[5])(int, int) = { 0,Add,Sub,Mul,Div };
+//	do
+//	{
+//		menu();
+//		printf("请选择：\n");
+//		scanf("%d", &input);
+//		if (input == 0)
+//		{
+//			printf("已退出\n");
+//		}
+//		else if (input >= 1 && input <= 4)
+//		{
+//			printf("请输入2个整数：");
+//			scanf("%d %d", &x, &y);
+//			ret = parr[input](x, y);
+//			printf("结果是：%d\n",ret);
+//		}
+//		else
+//		{
+//			printf("输入错误，请重试\n");
+//		}
+//	} while (input);
+//
+//	return 0;
+//}
+
+//冒泡排序_复习
+void bubble_sort(int arr[], int sz)
 {
-	printf("1.Add 2.Minus 3.Multiply 4.Division 0.exit\n");
-}
-int Add(int x, int y)
-{
-	return x + y;
-}
-int Sub(int x, int y)
-{
-	return x - y;
-}
-int Mul(int x, int y)
-{
-	return x * y;
-}
-int Div(int x, int y)
-{
-	return x / y;
-}
-//计算函数
-void calc(int(*pf)(int, int))
-{
-	int x = 0;
-	int y = 0;
-	int ret = 0;
-	printf("请输入2个整数：\n");
-	scanf("%d %d", &x, &y);
-	ret = pf(x, y);
-	printf("结果是：%d\n", ret);
+	int i = 0;
+	for (i = 0; i < sz-1; i++)
+	{
+		int j = 0;
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				int tmp = arr[j + 1];
+				arr[j + 1] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
 }
 int main()
 {
-	int input = 0;
-	do
+	//创建数组并输入
+	int arr[10] = { 0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	for (i = 0; i < sz; i++)
 	{
-		menu();
-		printf("请选择：");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			calc(Add);
-			break;
-		case 2:
-			calc(Sub);
-			break;
-		case 3:
-			calc(Mul);
-			break;
-		case 4:
-			calc(Div);
-			break;
-		case 0:
-			printf("退出程序\n");
-			break;
-		default:
-			printf("输入错误\n");
-			break;
-		}
-	} while (input);
+		scanf("%d ", &arr[i]);
+	}
+	//冒泡排序操作
+	bubble_sort(arr, sz);
+	//打印数组
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }
