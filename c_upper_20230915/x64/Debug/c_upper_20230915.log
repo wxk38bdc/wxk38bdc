@@ -1,0 +1,4 @@
+﻿  test.c
+D:\code2023\c-learning\c_upper_20230915\test.c(10,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\code2023\c-learning\c_upper_20230915\test.c(10,9): message : 请考虑在格式字符串中使用“%zd”
+  c_upper_20230915.vcxproj -> D:\code2023\c-learning\c_upper_20230915\x64\Debug\c_upper_20230915.exe
