@@ -1,2 +1,4 @@
 ﻿  test20230909.c
-  c_upper_20230909.vcxproj -> D:\code2023\c-learning\c_upper_20230909\Debug\c_upper_20230909.exe
+D:\code2023\c-learning\c_upper_20230909\test20230909.c(369,14): warning C4047: “=”:“char”与“char *”的间接级别不同
+D:\code2023\c-learning\c_upper_20230909\test20230909.c(367,9): warning C4047: “初始化”:“char *”与“char”的间接级别不同
+D:\code2023\c-learning\c_upper_20230909\test20230909.c(414,2): error C2198: “bubble_sort”: 用于调用的参数太少

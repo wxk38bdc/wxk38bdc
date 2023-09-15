@@ -358,40 +358,110 @@
 //	return 0;
 //}
 
+////冒泡排序_改进_仿照qsort
+//void Swap(char*buf1,char*buf2,int width)
+//{
+//	int i = 0;
+//	for (i = 0; i < width; i++)
+//	{
+//		char* tmp = *buf1;
+//		*buf1 = *buf2;
+//		*buf2 = tmp;
+//		buf1++;
+//		buf2++;
+//	}
+//}
+//void bubble_sort(void*base,int sz,int width,int(*cmp)(const void*e1,const void*e2))
+//{
+//	int i = 0;
+//	for (i = 0; i < sz-1; i++)
+//	{
+//		int flag = 1;//假设数组排好序
+//		//一趟冒泡排序的过程
+//		int j = 0;
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if (cmp((char*)base + j * width, (char*)base + (j + 1) * width) > 0)
+//			{
+//				Swap((char*)base + j * width, (char*)base + (j + 1) * width,width);
+//				flag = 0;
+//			}
+//			/*if (arr[j] > arr[j + 1])
+//			{
+//				int tmp = arr[j + 1];
+//				arr[j + 1] = arr[j];
+//				arr[j] = tmp;
+//				
+//			}*/
+//		}
+//		if (flag == 1)
+//		{
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	//创建数组并输入
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		scanf("%d ", &arr[i]);
+//	}
+//	//冒泡排序操作
+//	bubble_sort(arr, sz,sizeof arr[0]);
+//	//打印数组
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main(int argc, char* argv[])
+//{
+//	printf("hello");
+//	return 0;
+//}
+
 //冒泡排序_复习
-void bubble_sort(int arr[], int sz)
-{
-	int i = 0;
-	for (i = 0; i < sz-1; i++)
-	{
-		int j = 0;
-		for (j = 0; j < sz - 1 - i; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				int tmp = arr[j + 1];
-				arr[j + 1] = arr[j];
-				arr[j] = tmp;
-			}
-		}
-	}
-}
-int main()
-{
-	//创建数组并输入
-	int arr[10] = { 0 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int i = 0;
-	for (i = 0; i < sz; i++)
-	{
-		scanf("%d ", &arr[i]);
-	}
-	//冒泡排序操作
-	bubble_sort(arr, sz);
-	//打印数组
-	for (i = 0; i < sz; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	return 0;
-}
+//void bubble_sort(int arr[], int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < sz-1; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				int tmp = arr[j + 1];
+//				arr[j + 1] = arr[j];
+//				arr[j] = tmp;
+//			}
+//		}
+//	}
+//}
+//int main()
+//{
+//	//创建数组并输入
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		scanf("%d ", &arr[i]);
+//	}
+//	//冒泡排序操作
+//	bubble_sort(arr, sz);
+//	//打印数组
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
