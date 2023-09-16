@@ -26,3 +26,14 @@
 //	printf("%d\n", strlen(&arr[0] + 1));
 //	return 0;
 //}
+
+int main()
+{
+	int i = 0;
+	for (i = 1; i <=10; i++)
+	{
+		printf("你的生命浪费了%d秒\n",i);
+		Sleep(1000);
+	}
+	return 0;
+}
