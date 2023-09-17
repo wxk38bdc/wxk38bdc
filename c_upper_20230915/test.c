@@ -149,3 +149,44 @@
 //	printf("%s\n", cpp[-1][-1] + 1);//EW
 //	return 0;
 //}
+#include<assert.h>
+//char* my_strcpy(char* str2, const char* str1)
+//{
+//	assert(str1&&str2);
+//	char* ret = str2;
+//	while (*str2++ = *str1++)
+//		;
+//	*str2 = *str1;
+//	return ret;
+//}
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[20] = { 0 };
+//	my_strcpy(arr2, arr1);
+//	printf("%s\n", arr2);
+//	return 0;
+//}
+
+//char* my_strcat(char* dest, const char* src)
+//{
+//	char* ret = dest;
+//	assert(dest && src);
+//	while (*dest != '\0')
+//	{
+//		dest++;
+//	}
+//	while(*dest++=*src++)
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	char arr1[20] = "hello";
+//	my_strcat(arr1, " world");//×Ö·û´®×·¼Ó
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
