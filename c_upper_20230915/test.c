@@ -190,3 +190,116 @@
 //	return 0;
 //}
 
+//int my_strcmp(const char*str1,const char*str2)
+//{
+//	assert(str1 && str2);
+//	while (*str1 == *str2)
+//	{
+//		if (*str1 == '\0')
+//		{
+//			return 0;
+//		}
+//		str1++;
+//		str2++;
+//	}
+//	return(*str1 - *str2);
+//}
+//int main()
+//{
+//	char arr1[20] = "abcdef";
+//	char arr2[] = "abc";
+//	int ret = my_strcmp(arr1, arr2);
+//	if (ret > 0)
+//	{
+//		printf(">\n");
+//	}
+//	else if (ret == 0)
+//	{
+//		printf("==\n");
+//	}
+//	else
+//	{
+//		printf("<\n");
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	//char arr1[20] = "abcdef";
+//	//char arr2[] = "hello bit";
+//	//strncpy(arr1, arr2, 5);
+//	char arr1[10] = "hello";
+//	char arr2[] = "bit";
+//	strncat(arr1, arr2, 2);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//
+//int main()
+//{
+//	char str1[] = "wxk@bitejiuyeke.com";
+//	char str2[] = "bitejiuyeke";
+//	char* ret = strstr(str1, str2);//查找字符串，返回值类型为char*
+//	if (ret == NULL)
+//	{
+//		printf("子串不存在\n");
+//	}
+//	else
+//	{
+//		printf("%s\n", ret);
+//	}
+//	return 0;
+//}
+
+//char* my_strstr(const char* str1, const char* str2)//参考代码，模拟实现strstr//暂时存疑，功能不完善
+//{
+//	assert(str1 && str2);
+//	const char* s1 = str1;
+//	const char* s2 = str2;
+//	const char* p = str1;
+//	while (*p)
+//	{
+//		s1 = p;
+//		s2 = str2;
+//		if (*s1!='\0'&& *s2!='\0' && *s1 == *s2)
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//		{
+//			return (char*)p;
+//		}
+//		p++;
+//	}
+//	return NULL;
+//}
+//int main()
+//{
+//	char str1[] = "abc";
+//	char str2[] = "abc";
+//	char* ret = my_strstr(str1, str2);
+//	if (ret == NULL)
+//	{
+//		printf("子串不存在\n");
+//	}
+//	else
+//	{
+//		printf("%s\n", ret);
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	const char* sep = "@.";
+	char email[] = "wangxikang@qq.com";
+	char* ret = strtok(email, sep);
+	printf("%s\n", ret);
+	ret = strtok(NULL, sep);
+	printf("%s\n", ret);
+	ret = strtok(NULL, sep);
+	printf("%s\n", ret);
+	return 0;
+}
