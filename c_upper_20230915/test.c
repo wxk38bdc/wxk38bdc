@@ -305,23 +305,44 @@
 //}
 
 #include<windows.h>
+//int main()
+//{
+//	printf("您的电脑即将在2分钟后关机\n");
+//	system("shutdown -s -t 120");
+//	char arr[20] = { 0 };
+//	again:
+//	printf("输入“爸爸”即可取消关机\n");
+//	gets(arr);
+//	int i=strcmp(arr, "爸爸");
+//	if (i == 0)
+//	{
+//		system("shutdown -a");
+//		printf("关机已取消\n");
+//	}
+//	else
+//	{
+//		goto again;
+//	}
+//	return 0;
+//}
+#include<errno.h>
 int main()
 {
-	printf("您的电脑即将在2分钟后关机\n");
-	system("shutdown -s -t 120");
-	char arr[20] = { 0 };
-	again:
-	printf("输入“爸爸”即可取消关机\n");
-	gets(arr);
-	int i=strcmp(arr, "爸爸");
-	if (i == 0)
+	//printf("%s\n", strerror(0));//错误码
+	//printf("%s\n", strerror(1));
+	//printf("%s\n", strerror(2));
+	//printf("%s\n", strerror(3));
+	//printf("%s\n", strerror(4));
+	//printf("%s\n", strerror(5));
+	//errno-C语言设置的一个全局的错误码存放的变量
+	FILE* pf = fopen("text.txt", "r");
+	if (pf == NULL)
 	{
-		system("shutdown -a");
-		printf("关机已取消\n");
+		printf("%s\n", strerror(errno));
 	}
 	else
 	{
-		goto again;
+
 	}
 	return 0;
 }
