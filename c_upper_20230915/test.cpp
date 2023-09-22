@@ -356,27 +356,368 @@ using namespace std;
 //	printf("%c", tolower('S'));
 //	return 0;
 //}
-void* my_memcpy(void* dest, void* src, int num)
-{
-	assert(dest && src);
-	void* ret = dest;
-	while (num--)
-	{
-		*(char*)dest = *(char*)src;
-		dest = (char*)dest + 1;
-		src = (char*)src + 1;
-	}
-	return ret;
-}
-int main()
-{
-	int arr1[] = { 1,2,3,4,5,6,7 };
-	int arr2[] = { 9,8,7,6,5,4,3 };
-	my_memcpy(arr1, arr2, sizeof(arr1));
-	int i = 0;
-	for (i = 0; i < 7; i++)
-	{
-		printf("%d ", arr1[i]);
-	}
-	return 0;
-}
+//void* my_memcpy(void* dest, void* src, int num)
+//{
+//	assert(dest && src);
+//	void* ret = dest;
+//	while (num--)
+//	{
+//		*(char*)dest = *(char*)src;
+//		dest = (char*)dest + 1;
+//		src = (char*)src + 1;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5,6,7 };
+//	int arr2[] = { 9,8,7,6,5,4,3 };
+//	my_memcpy(arr1, arr2, sizeof(arr1));
+//	int i = 0;
+//	for (i = 0; i < 7; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>  
+
+//#include<iostream>
+//using namespace std;
+//int main() 
+//{
+//    cout << "F E";
+//    return 0;
+//}
+
+//#include <stdio.h>  
+//
+//int main()
+//{
+//	int route;
+//	scanf("%d", &route);
+//	int tb = 27 + route / 3+23;
+//	int tw = route / 1.2;
+//	if (tb > tw)
+//	{
+//		printf("Walk");
+//	}
+//	else if (tb == tw)
+//	{
+//		printf("All");
+//	}
+//	else
+//	{
+//		printf("Bike");
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>  
+//
+//int main() {
+//    // 定义一些常量  
+//    const double WALK_SPEED = 1.2; // 步行速度，单位：米/秒  
+//    const double BIKE_SPEED = 3.0; // 骑车速度，单位：米/秒  
+//    const double BIKE_TIME = 27.0; // 骑车固定时间，单位：秒  
+//    const double LOCK_TIME = 23.0; // 锁车固定时间，单位：秒  
+//
+//    // 输入要行走的距离  
+//    double distance;
+//    //printf("请输入一次办事要行走的距离（单位：米）：");
+//    scanf("%lf", &distance);
+//
+//    // 计算骑车和走路所需的时间  
+//    double bike_time = distance / BIKE_SPEED + BIKE_TIME + LOCK_TIME;
+//    double walk_time = distance / WALK_SPEED;
+//
+//    // 判断并输出结果  
+//    if (bike_time < walk_time) {
+//        printf("Bike\n");
+//    }
+//    else if (bike_time > walk_time) {
+//        printf("Walk\n");
+//    }
+//    else {
+//        printf("All\n");
+//    }
+//
+//    return 0;
+//}
+
+//#include <stdio.h>  
+//int main()
+//{
+//	int arr[3];
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int max = arr[0];
+//	for (i = 0; i < 2; i++)
+//	{
+//		if (arr[i] < arr[i + 1])
+//		{
+//			max = arr[i + 1];
+//		}
+//	}
+//	printf("%d", max);
+//	return 0;
+//}
+
+//#include <stdio.h>  
+//int main()
+//{
+//	printf("Hello, world!");
+//	return 0;
+//}
+
+#include <stdio.h>
+//#include <string.h>  
+//
+//int main() {
+//    char a[1000], b[1000]; // 定义字符串变量  
+//    int len_a, len_b, i, j, carry; // len_a和len_b表示a和b的长度，i和j表示循环计数器，carry表示进位  
+//
+//    // 读入a和b的字符串形式，并求出它们的长度  
+//    scanf("%s", a);
+//    scanf("%s", b);
+//    len_a = strlen(a);
+//    len_b = strlen(b);
+//
+//    // 从低位到高位逐位相加，并处理进位  
+//    for (i = 0, j = 0; i < len_a || j < len_b; i++, j++) {
+//        int sum = 0;
+//        if (i < len_a) {
+//            sum += a[len_a - 1 - i] - '0';
+//        }
+//        if (j < len_b) {
+//            sum += b[len_b - 1 - j] - '0';
+//        }
+//        carry = sum / 10; // 求进位  
+//        printf("%d", sum % 10); // 输出本位的值  
+//        if (carry > 0) { // 如果进位大于0，需要输出进位  
+//            printf("%d", carry);
+//        }
+//    }
+//    printf("\n");
+//
+//    return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int M, N, X,power;//M 体力最大值 N战斗力 X能量元素 power体力值
+//	scanf("%d %d %d", &M, &N, &X);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>  
+//
+//int MAX(int a, int b) 
+//{
+//    return a > b ? a : b;
+//}
+//
+//int main() {
+//    int M, N, X;
+//    scanf("%d %d %d", &M, &N, &X);
+//
+//    int max_force = N; // 初始战斗力  
+//    int rest_days = M; // 剩余天数  
+//    int rest_energy = X; // 剩余能量元素  
+//
+//    while (rest_days > 0 && rest_energy > 0) {
+//        // 计算当前战斗期内的战斗任务数量  
+//        int tasks = MAX(1, (rest_days - 1) / N) + 1;
+//        // 计算当前战斗期需要的能量元素数量  
+//        int needed_energy = MAX(1, (M - tasks + 1) / N) * N;
+//        // 如果当前剩余能量元素足够，则参加战斗，更新剩余天数和剩余能量元素数量  
+//        if (needed_energy <= rest_energy) {
+//            rest_days -= tasks;
+//            rest_energy -= needed_energy;
+//            // 更新最大战斗力  
+//            max_force = MAX(max_force, N + (tasks - 1) / N);
+//        }
+//        else {
+//            // 如果当前剩余能量元素不足，则不参加战斗，直接退出循环  
+//            break;
+//        }
+//    }
+//
+//    printf("%d\n", max_force);
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    int M, N, X;
+//    scanf("%d %d %d", &M, &N, &X);
+//
+//    int max_power = 0;
+//    int power = 0;
+//
+//    while (X > 0) {
+//        if (power == M) {
+//            power = 0;
+//            X--;
+//        }
+//
+//        if (power < M) {
+//            power++;
+//            max_power = power > max_power ? power : max_power;
+//        }
+//
+//        if (X > 0) {
+//            int energy = power < M ? (M - power) : 0;
+//            power += energy <= X ? energy : X;
+//            X -= energy <= X ? energy : X;
+//        }
+//    }
+//
+//    printf("%d\n", max_power);
+//
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    int M, N, X;
+//    scanf("%d %d %d", &M, &N, &X);
+//
+//    int max_power = N;
+//    int remain_energy = X;
+//
+//    for (int i = 0; i < M; i++) {
+//        if (remain_energy <= max_power) {
+//            max_power += remain_energy;
+//            remain_energy = 0;
+//        }
+//        else {
+//            max_power += max_power + 1;
+//            remain_energy -= max_power;
+//        }
+//    }
+//
+//    printf("%d\n", max_power);
+//
+//    return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[100] = { 0 };
+//	int i, j;
+//	scanf("%d", &i);
+//	for (j = 0; j < i; j++)
+//	{
+//		scanf("%d", &arr[j]);
+//	}
+//	float ret=0.0;
+//	for (j = 0; j < i; j++)
+//	{
+//		ret += (float)arr[j];
+//	}
+//	ret /= i;
+//	printf("%.2f\n", ret);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int arr[1000] = { 0 };
+//	int i = 0;
+//	int ret = 0;
+//	int add = (n - 2) * 180;
+//	for (i = 0; i < n - 1; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//		add -= arr[i];
+//	}
+//	printf("%d", add);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	unsigned int n = 0;
+//	unsigned int arr[1001] = { 0 };
+//	unsigned int MAX = 0;
+//	unsigned int MIN = 0;
+//	unsigned int i = 0;
+//	scanf("%u", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%u", &arr[i]);
+//	}
+//	MAX = arr[0];
+//	MIN = arr[0];
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i]>MAX)
+//		{
+//			MAX = arr[i];
+//		}
+//		else if (arr[i]<MIN)
+//		{
+//			MIN = arr[i];
+//		}
+//	}
+//	printf("%u", MAX - MIN);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int fact(int n)//实现n的阶乘
+//{
+//	int  res = n;
+//	if (n == 0||n==1)
+//	{
+//		res = 1;
+//	}
+//	else if (n > 1)
+//	{
+//		res*=fact(n - 1);
+//	}
+//	return res;
+//}
+//int main()
+//{
+//	int n = 0, i = 0;
+//	double e = 0.0;
+//	double ret = 0.0;
+//	scanf("%d", &n);
+//	for (i = 0; i <= n; i++)
+//	{
+//		ret += 1.0 / fact(i);
+//	}
+//	printf("%.10lf", ret);
+//	//double a = 0;
+//	//scanf("%lf", &a);
+//	//printf("%lf", fact(a));
+//	return 0;
+//}
+
+//#include <stdio.h>  
+//int main() 
+//{
+//    int n;
+//    double e = 1.0, factorial = 1.0;
+//    scanf("%d", &n);
+//    for (int i = 1; i <= n; i++) {
+//        factorial *= i;
+//        e += 1.0 / factorial;
+//    }
+//    printf("%.10f", e);
+//    return 0;
+//}
