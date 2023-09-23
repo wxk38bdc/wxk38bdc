@@ -721,3 +721,136 @@ using namespace std;
 //    printf("%.10f", e);
 //    return 0;
 //}
+//int get_min(int a, int b)//获取最小公倍数
+//{
+//	int c = a > b ? a : b;
+//	while ((c % a == 0 && c % b == 0) == 0)
+//	{
+//		c++;
+//	}
+//	return c;
+//}
+//#include <stdio.h>  
+//
+//int main()
+//{
+//	int N = 0, NA = 0, NB = 0, i = 0, j = 0;
+//	int arr1[100] = { 0 };
+//	int arr2[100] = { 0 };
+//	scanf("%d %d %d", &N, &NA, &NB);
+//	for (i = 0; i < NA; i++)
+//	{
+//		scanf("%d", &arr1[i]);
+//	}
+//	for (i = 0; i < NB; i++)
+//	{
+//		scanf("%d", &arr2[i]);
+//	}
+//	//int arr3[10000] = { 0 };
+//	//int arr4[10000] = { 0 };
+//	//int price = 100;
+//	//while (price)
+//	//{
+//	//	for (i = 0; i < NA; i++)
+//	//	{
+//	//		arr3[j] = arr1[i];
+//	//	}
+//	//	j += NA;
+//	//	price--;
+//	//}
+//	//j = 0;
+//	//while (price)
+//	//{
+//	//	for (i = 0; i < NB; i++)
+//	//	{
+//	//		arr4[j] = arr2[i];
+//	//	}
+//	//	j += NB;
+//	//	price--;
+//	//}
+//	//int count = 0;
+//	//for (i = 0; i < N; i++)
+//	//{
+//	//	if ((arr3[i] - arr4[i] == -2) || (arr3[i] - arr4[i] == -3) || (arr3[i] - arr4[i] == 5))
+//	//	{
+//	//		count++;
+//	//	}
+//	//	else if ((arr3[i] - arr4[i] == 2) || (arr3[i] - arr4[i] == 3) || (arr3[i] - arr4[i] == -5))
+//	//	{
+//	//		count--;
+//	//	}
+//	//}
+//	//if (count > 0)
+//	//	printf("A");
+//	//else if (count == 0)
+//	//	printf("draw");
+//	//else
+//	//	printf("B");
+//	printf("A");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    int N, NA, NB;
+//    int a[100], b[100];
+//    // 读取输入数据
+//    scanf("%d %d %d", &N, &NA, &NB);
+//    for (int i = 0; i < NA; i++) 
+//    {
+//        scanf("%d", &a[i]);
+//    }
+//    for (int i = 0; i < NB; i++) 
+//    {
+//        scanf("%d", &b[i]);
+//    }
+//    // 模拟猜拳的过程并统计胜利轮数
+//    int countA = 0, countB = 0;
+//    for (int i = 0; i < N; i++) 
+//    {
+//        if ((a[i % NA] == 0 && b[i % NB] == 2)|| (a[i % NA] == 2 && b[i % NB] == 5)|| (a[i % NA] == 5 && b[i % NB] == 0)) //WC 直接取模？！牛逼！
+//        {
+//            countA++;
+//        }
+//        else if (a[i % NA] != b[i % NB])
+//        {
+//            countB++;
+//        }
+//    }
+//    // 输出结果
+//    if (countA > countB) 
+//    {
+//        printf("A\n");
+//    }
+//    else if (countA < countB)
+//    {
+//        printf("B\n");
+//    }
+//    else 
+//    {
+//        printf("draw\n");
+//    }
+//    return 0;
+//}
+
+int main()
+{
+	int n = 0, i = 0, j = 0;
+	scanf("%d", &n);
+	for (i = 1; i <=n; i++)
+	{
+		for (j = n - i - 1; j >= 0; j--)
+		{
+			printf("  ");
+		}
+		for (j = 0; j < i; j++)
+		{
+			printf("* ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+
