@@ -834,23 +834,48 @@ using namespace std;
 //    return 0;
 //}
 
+//int main()
+//{
+//	int n = 0, i = 0, j = 0;
+//	scanf("%d", &n);
+//	for (i = 1; i <=n; i++)
+//	{
+//		for (j = n - i - 1; j >= 0; j--)
+//		{
+//			printf("  ");
+//		}
+//		for (j = 0; j < i; j++)
+//		{
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//ÊµÏÖ×Ö·û´®µÄ×óÒÆ
+void left_rotate(char*arr, int k)
+{
+	int i = 0;
+	int len = strlen(arr);
+	for (i = 0; i < k; i++)
+	{
+		char tmp = arr[0];
+		int j = 0;
+		for (j = 0; j < len - 1; j++)
+		{
+			arr[j] = arr[j + 1];
+		}
+		arr[len - 1] = tmp;
+	}
+}
 int main()
 {
-	int n = 0, i = 0, j = 0;
-	scanf("%d", &n);
-	for (i = 1; i <=n; i++)
-	{
-		for (j = n - i - 1; j >= 0; j--)
-		{
-			printf("  ");
-		}
-		for (j = 0; j < i; j++)
-		{
-			printf("* ");
-		}
-		printf("\n");
-	}
+	char arr[] = "abcdefghijklmn";
+	int k = 0;
+	scanf("%d", &k);
+	left_rotate(arr, k);
+	printf("%s\n", arr);
 	return 0;
 }
-
 
