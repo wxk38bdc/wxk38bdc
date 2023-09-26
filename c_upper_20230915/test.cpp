@@ -854,28 +854,147 @@ using namespace std;
 //}
 
 //ÊµÏÖ×Ö·û´®µÄ×óÒÆ
-void left_rotate(char*arr, int k)
-{
-	int i = 0;
-	int len = strlen(arr);
-	for (i = 0; i < k; i++)
-	{
-		char tmp = arr[0];
-		int j = 0;
-		for (j = 0; j < len - 1; j++)
-		{
-			arr[j] = arr[j + 1];
-		}
-		arr[len - 1] = tmp;
-	}
-}
-int main()
-{
-	char arr[] = "abcdefghijklmn";
-	int k = 0;
-	scanf("%d", &k);
-	left_rotate(arr, k);
-	printf("%s\n", arr);
-	return 0;
+//void left_rotate(char*arr, int k)
+//{
+//	int i = 0;
+//	int len = strlen(arr);
+//	for (i = 0; i < k; i++)
+//	{
+//		char tmp = arr[0];
+//		int j = 0;
+//		for (j = 0; j < len - 1; j++)
+//		{
+//			arr[j] = arr[j + 1];
+//		}
+//		arr[len - 1] = tmp;
+//	}
+//}
+//int main()
+//{
+//	char arr[] = "abcdefghijklmn";
+//	int k = 0;
+//	scanf("%d", &k);
+//	left_rotate(arr, k);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+#include<iostream>
+using namespace std;
+#include<stdio.h>
+//void bubbleSort(int arr[], int n) 
+//{
+//    int i, j, temp;
+//    for (i = 0; i < n - 1; i++) 
+//    {
+//        for (j = 0; j < n - i - 1; j++) 
+//        {
+//            if (arr[j] > arr[j + 1]) 
+//            {
+//                temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+//            }
+//        }
+//    }
+//}
+//int is_jolly(int n, int* arr)
+//{
+//    int i = 0;
+//    if (arr[0] != 1)
+//    {
+//        return 0;
+//    }
+//    for (i = 0; i < n-1; i++)
+//    {
+//        if (arr[i + 1] - arr[i] != 1)
+//        {
+//            return 0;
+//        }
+//    }
+//    return 1;
+//}
+//int main()
+//{
+//    int n, i;
+//    scanf("%d", &n);
+//    int arr[4000];
+//    for (i = 0; i < n; i++) 
+//    {
+//        scanf("%d", &arr[i]);
+//    }
+//    bubbleSort(arr, n);
+//    int kkk = is_jolly(n, arr);
+//    if (n == 1||kkk==1)
+//    {
+//        printf("Jolly");
+//    }
+//    else
+//    {
+//        printf("Not jolly");
+//    }
+//	return 0;
+//}
+#include <stdio.h>
+#include <stdlib.h>
+
+void bubbleSort(int arr[], int n) {
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
 }
 
+int is_jolly(int n, int arr[]) {
+    int i;
+    int diff[n - 1];
+    int diff[n - 1];
+
+    for (i = 0; i < n - 1; i++) {
+        diff[i] = abs(arr[i + 1] - arr[i]);
+    }
+
+    bubbleSort(diff, n - 1);
+
+    for (i = 0; i < n - 2; i++) {
+        if (diff[i] != i + 1) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+int main() {
+    int n, i;
+
+    scanf("%d", &n);
+    int* arr = (int*)malloc(n * sizeof(int));
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int isJolly = is_jolly(n, arr);
+
+    if (n == 1 || isJolly) {
+        printf("Jolly\n");
+    }
+    else {
+        printf("Not jolly\n");
+    }
+
+    free(arr);
+    return 0;
+}
+
+
+
+
+ 

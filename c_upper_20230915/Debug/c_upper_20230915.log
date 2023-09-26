@@ -1,2 +1,5 @@
 ﻿  test.cpp
-  c_upper_20230915.vcxproj -> D:\code2023\c-learning\c_upper_20230915\Debug\c_upper_20230915.exe
+D:\code2023\c-learning\c_upper_20230915\test.cpp(956,16): error C2131: 表达式的计算结果不是常数
+D:\code2023\c-learning\c_upper_20230915\test.cpp(956,14): message : 因读取超过生命周期的变量而失败
+D:\code2023\c-learning\c_upper_20230915\test.cpp(956,14): message : 请参见“n”的用法
+D:\code2023\c-learning\c_upper_20230915\test.cpp(959,17): error C3863: 不可指定数组类型“int [n-1]”
