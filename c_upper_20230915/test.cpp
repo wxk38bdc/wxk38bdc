@@ -937,64 +937,184 @@ using namespace std;
 //}
 #include <stdio.h>
 #include <stdlib.h>
+//
+//void bubbleSort(int arr[], int n) {
+//    int i, j, temp;
+//    for (i = 0; i < n - 1; i++) {
+//        for (j = 0; j < n - i - 1; j++) {
+//            if (arr[j] > arr[j + 1]) {
+//                temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+//            }
+//        }
+//    }
+//}
+//
+//int is_jolly(int n, int arr[]) {
+//    int i;
+//    int diff[n - 1];
+//    int diff[n - 1];
+//
+//    for (i = 0; i < n - 1; i++) {
+//        diff[i] = abs(arr[i + 1] - arr[i]);
+//    }
+//
+//    bubbleSort(diff, n - 1);
+//
+//    for (i = 0; i < n - 2; i++) {
+//        if (diff[i] != i + 1) {
+//            return 0;
+//        }
+//    }
+//
+//    return 1;
+//}
+//
+//int main() {
+//    int n, i;
+//
+//    scanf("%d", &n);
+//    int* arr = (int*)malloc(n * sizeof(int));
+//
+//    for (i = 0; i < n; i++) {
+//        scanf("%d", &arr[i]);
+//    }
+//
+//    int isJolly = is_jolly(n, arr);
+//
+//    if (n == 1 || isJolly) {
+//        printf("Jolly\n");
+//    }
+//    else {
+//        printf("Not jolly\n");
+//    }
+//
+//    free(arr);
+//    return 0;
+//}
 
-void bubbleSort(int arr[], int n) {
-    int i, j, temp;
-    for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
+#include <stdio.h>
+
+#include<string.h>
+//int main()
+//{
+//	int a = 0, b = 0;
+//	scanf("%d %d", &a, &b);
+//	char c[];
+//	scanf("%c", &c);
+//	if(strcmp(c,'+')==1)
+//		printf("%d", a + b);
+//	/*case '-':
+//		printf("%d", a - b);
+//		break;
+//	case '*':
+//		printf("%d", a * b);
+//		break;
+//	case '/':
+//		printf("%d", a / b);
+//		break;
+//	default:
+//		printf("Invalid operator!");
+//		break;*/
+//	
+//	return 0;
+//}
+//
+//#include <stdio.h>  
+//
+//int main() {
+//    int num1, num2;
+//    char op;
+//
+//    //printf("请输入两个整数和一个操作符（+,-,*,/）：\n");
+//    scanf("%d %d %c", &num1, &num2, &op);
+//
+//    switch (op) {
+//    case '+':
+//        printf("%d\n", num1 + num2);
+//        break;
+//    case '-':
+//        printf("%d\n", num1 - num2);
+//        break;
+//    case '*':
+//        printf("%d\n", num1 * num2);
+//        break;
+//    case '/':
+//        if (num2 == 0) {
+//            printf("Divided by zero!\n");
+//        }
+//        else {
+//            printf("%d\n", num1 / num2);
+//        }
+//        break;
+//    default:
+//        printf("Invalid operator!\n");
+//        break;
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>  
+//
+//int main() {
+//    int num1, num2;
+//    char op;
+//
+//    //printf("请输入两个整数和一个操作符（+,-,*,/）：\n");
+//    scanf("%d%d%c", &num1, &num2, &op);
+//
+//    if ((int)op == 43) {
+//        printf("%d", num1 + num2);
+//    }
+//    else if ((int)op == 45) {
+//        printf("%d", num1 - num2);
+//    }
+//    else if ((int)op == 42) {
+//        printf("%d", num1 * num2);
+//    }
+//    else if ((int)op == 47) {
+//        if (num2 == 0) {
+//            printf("Divided by zero!\n");
+//        }
+//        else {
+//            printf("%d\n", num1 / num2);
+//        }
+//    }
+//    else {
+//        printf("Invalid operator!\n");
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>  
+//#include<math.h>
+//int main()
+//{
+//	float a, b, c;
+//	scanf("%f%f%f", &a, &b, &c);
+//	if (b * b == 4 * a * c)
+//		printf("x1=x2=%.5f", -b / (2*a));
+//	else if (b * b > 4 * a * c)
+//		printf("x1=%.5f;x2=%.5f", (-b + sqrt(b * b - 4 * a * c)) / (2 * a), (-b - sqrt(b * b - 4 * a * c)) / (2 * a));
+//	else if (b * b < 4 * a * c)
+//		printf("x1=%.5f+%.5fi;x2=%.5f-%.5fi", -b / (2 * a), sqrt(4 * a * c - b * b) / (2 * a), -b / (2 * a), sqrt(4 * a * c - b * b) / (2 * a));
+//	
+//	return 0;
+//}
+
+#include <stdio.h>  
+int main()
+{
+	float a = 0.0f;
+	scanf("%f", &a);
+	if (a >= 0)
+		printf("%.2f", a);
+	else
+		printf("%.2f", -a);
+	return 0;
+
 }
-
-int is_jolly(int n, int arr[]) {
-    int i;
-    int diff[n - 1];
-    int diff[n - 1];
-
-    for (i = 0; i < n - 1; i++) {
-        diff[i] = abs(arr[i + 1] - arr[i]);
-    }
-
-    bubbleSort(diff, n - 1);
-
-    for (i = 0; i < n - 2; i++) {
-        if (diff[i] != i + 1) {
-            return 0;
-        }
-    }
-
-    return 1;
-}
-
-int main() {
-    int n, i;
-
-    scanf("%d", &n);
-    int* arr = (int*)malloc(n * sizeof(int));
-
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    int isJolly = is_jolly(n, arr);
-
-    if (n == 1 || isJolly) {
-        printf("Jolly\n");
-    }
-    else {
-        printf("Not jolly\n");
-    }
-
-    free(arr);
-    return 0;
-}
-
-
 
 
  
