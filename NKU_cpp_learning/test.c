@@ -165,30 +165,131 @@
 
 #include <stdio.h>
 
-int main()
-{
-	
-	int x,money;
-	char c;
-	scanf("%d %c", &x, &c);
-	money = 8;
-	if (c == 'y')
-	{
-		money += 5;
-	}
-	if (x <= 1000)
-	{
-		printf("%d", money);
-	}
-	else
-	{
-		int y = x - 1000;
-		int z = y / 500;
-		if (y % 500 == 0)
-		{
-			printf("%d", money+4*z);
+//int main()
+//{
+//	
+//	int x,money;
+//	char c;
+//	scanf("%d %c", &x, &c);
+//	money = 8;
+//	if (c == 'y')
+//	{
+//		money += 5;
+//	}
+//	if (x <= 1000)
+//	{
+//		printf("%d", money);
+//	}
+//	else
+//	{
+//		int y = x - 1000;
+//		int z = y / 500;
+//		if (y % 500 == 0)
+//		{
+//			printf("%d", money+4*z);
+//		}
+//		else
+//		{
+//			printf("%d", money + 4 * (z+1));
+//		}
+//	}
+//	return 0;
+//}
 
-		}
-	}
+//#include <stdio.h>
+//int main()
+//{
+//	int x, y;
+//	scanf("%d%d", &x, &y);
+//	if ((y <= 1) && (y >=- 1) && (x <=  1) && (x >= - 1))
+//		printf("yes");
+//	else
+//		printf("no");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0, n = 0;
+//	int arr[400] = { 0 };
+//	scanf("%d", &n);
+//	for (i = 0; i < 3 * n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int gold = 0, silver = 0, bronze = 0;
+//	for (i = 0; i < 3 * n - 2; i += 3)
+//	{
+//		gold += arr[i];
+//	}
+//	for (i = 1; i < 3 * n - 1; i += 3)
+//	{
+//		silver += arr[i];
+//	}
+//	for (i = 2; i < 3 * n ; i += 3)
+//	{
+//		bronze += arr[i];
+//	}
+//	int total = gold + silver + bronze;
+//	printf("%d %d %d %d", gold, silver, bronze,total);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int m = 0, n = 0, i = 0, sum = 0;
+//	scanf("%d%d", &m, &n);
+//	for (i = m; i <= n; i++)
+//	{
+//		if (i % 2 == 1)
+//		{
+//			sum += i;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	float n = 0.0f;
+//	scanf("%f", &n);
+//	int i = 0;
+//	float arr[50] = { 0 };
+//	for (i = 0; i < n * 2; i++)
+//	{
+//		scanf("%f", &arr[i]);
+//	}
+//	float x = arr[1] / arr[0] * 1.0;
+//	float y[21] = { 0.0 };
+//	for (i = 2; i < n * 2; i += 2)
+//	{
+//		float y = arr[i + 1] / arr[i] * 1.0;
+//		if (y - x > 0.05)
+//		{
+//			printf("better\n");
+//		}
+//		else if (x - y > 0.05)
+//		{
+//			printf("worse\n");
+//		}
+//		else
+//		{
+//			printf("same\n");
+//		}
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+int main()//B2067“©∑øπ‹¿Ì
+{
+	int m = 0, n = 0;
+	scanf("%d%d", &m, &n);
+
 	return 0;
 }
