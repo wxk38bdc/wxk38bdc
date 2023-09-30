@@ -1103,17 +1103,28 @@ using namespace std;
 //	return 0;
 //}
 
-#include <stdio.h>  
+//#include <stdio.h>  
+//int main()
+//{
+//	float a = 0.0f;
+//	scanf("%f", &a);
+//	if (a >= 0)
+//		printf("%.2f", a);
+//	else
+//		printf("%.2f", -a);
+//	return 0;
+//
+//}
+
 int main()
 {
-	float a = 0.0f;
-	scanf("%f", &a);
-	if (a >= 0)
-		printf("%.2f", a);
-	else
-		printf("%.2f", -a);
+	int a = 0;
+	for (a = 0; a < 10; a++)
+	{
+		cout << a << endl;
+		Sleep(500);
+	}
 	return 0;
-
 }
 
 
