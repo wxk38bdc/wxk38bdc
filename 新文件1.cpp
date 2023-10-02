@@ -1,27 +1,19 @@
-#include <stdio.h>
-
-int main() {
-	int num1, num2;
-	char op;
-
-	printf("请输入两个整数和一个操作符（+,-,*,/）：\n");
-	scanf("%d%d%c", &num1, &num2, &op);
-
-	if (op == '+') {
-		printf("%d + %d = %d\n", num1, num2, num1 + num2);
-	} else if (op == '-') {
-		printf("%d - %d = %d\n", num1, num2, num1 - num2);
-	} else if (op == '*') {
-		printf("%d * %d = %d\n", num1, num2, num1 * num2);
-	} else if (op == '/') {
-		if (num2 == 0) {
-			printf("Divided by zero!\n");
-		} else {
-			printf("%d / %d = %d\n", num1, num2, num1 / num2);
-		}
-	} else {
-		printf("Invalid operator!\n");
-	}
-
-	return 0;
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n = 0, i = 0;
+    scanf("%d", &n);
+    double q[40] = { 2.0 };
+    double p[40] = { 1.0 };
+    double sum = 0.0;
+    for (i = 1; i <= n; i++)
+    {
+        q[i + 1] = q[i] + p[i];
+        p[i + 1] = q[i];
+        sum += q[i] / p[i] * 1.0;
+    }
+    printf("%lf", sum);
+    return 0;
 }

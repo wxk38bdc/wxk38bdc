@@ -81,9 +81,6 @@
 //    return 0;
 //}
 
-#include<stdio.h>
-#include<iostream>
-using namespace std;
 //int main()
 //{
 //	int n;
@@ -110,3 +107,107 @@ using namespace std;
 //	cout << ret;
 //	return 0;
 //}
+
+//int fib(int n)
+//{
+//    if (n == 1 || n == 0)
+//        return 1;
+//    else
+//        return fib(n - 1) + fib(n - 2);
+//}
+//int main()
+//{
+//    int n = 0, i = 0;
+//    scanf("%d", &n);
+//    double sum = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        sum += (double)fib(i+2) / (double)fib(i + 1);
+//    }
+//    printf("%.4lf", sum);
+//    return 0;
+//}
+
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	cout << n*(n+1)/2;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a, b, n;
+//	cin >> a >> b >> n;
+//	double c = 1.0 * a / b;
+//	for (int i = 0; i < n; i++)
+//	{
+//		c *= 10.0;
+//	}
+//	printf("%d", (int)c % 10);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a, b, ret=1;
+//	cin >> a >> b;
+//	for (int i = 0; i < b; i++)
+//	{
+//		ret *= a;
+//		ret %= 7;
+//	}
+//	switch(ret)
+//	{ 
+//	case 1:
+//		cout << "Monday" << endl; 
+//		break;
+//	case 2:
+//		cout << "Tuesday" << endl;
+//		break;
+//	case 3:
+//		cout << "Wednesday" << endl;
+//		break;
+//	case 4:
+//		cout << "Thursday" << endl;
+//		break;
+//	case 5:
+//		cout << "Friday" << endl;
+//		break;
+//	case 6:
+//		cout << "Saturday" << endl;
+//		break;
+//	case 0:
+//		cout << "Sunday" << endl;
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a, b,ret=1;
+//	cin >> a >> b;
+//	for (int i = 0; i < b; i++)
+//	{
+//		ret *= a;
+//		ret %= 1000;
+//	}
+//	if (ret >= 100)
+//		printf("%d", ret);
+//	else if (ret < 100 && ret>10)
+//		printf("0%d", ret);
+//	else
+//		printf("00%d", ret);
+//	return 0;
+//}
+
+#include<stdio.h>
+#include<math.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	return 0;
+}
