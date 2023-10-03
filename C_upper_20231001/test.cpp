@@ -305,33 +305,40 @@
 //	return 0;
 //}
 
+//
+//int 计算出现次数(int L, int R) {
+//    int ans = 0;
+//
+//    for (int i = L; i <= R; i++) {
+//        int 数字 = i;
+//
+//        while (数字 != 0) {
+//            int 个位数 = 数字 % 10;
+//            数字 = 数字 / 10;
+//
+//            if (个位数 == 2) {
+//                ans++;
+//            }
+//        }
+//    }
+//
+//    return ans;
+//}
+//
+//int main() {
+//    int L, R;
+//    scanf("%d%d", &L, &R);
+//
+//    int 结果 = 计算出现次数(L, R);
+//    printf("%d", 结果);
+//
+//    return 0;
+//}
 #include <stdio.h>
-
-int 计算出现次数(int L, int R) {
-    int ans = 0;
-
-    for (int i = L; i <= R; i++) {
-        int 数字 = i;
-
-        while (数字 != 0) {
-            int 个位数 = 数字 % 10;
-            数字 = 数字 / 10;
-
-            if (个位数 == 2) {
-                ans++;
-            }
-        }
-    }
-
-    return ans;
-}
-
-int main() {
-    int L, R;
-    scanf("%d%d", &L, &R);
-
-    int 结果 = 计算出现次数(L, R);
-    printf("%d", 结果);
-
-    return 0;
+int main()
+{
+	int a, b, c;
+	scanf("%d%d%d", &a, &b, &c);
+	printf("%d", a + b * c);
+	return 0;
 }
