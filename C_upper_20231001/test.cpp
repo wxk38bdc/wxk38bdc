@@ -202,12 +202,136 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-#include<math.h>
-#include<iostream>
-using namespace std;
-int main()
-{
+//int main()
+//{
+//	double h = 0;
+//	cin >> h;
+//	double total;
+//	total = 2.99609375 * h;
+//	cout << total << endl<< 0.0009765625 *h;
+//	return 0;
+//}
 
-	return 0;
+//int main()
+//{
+//	long long n = 0;
+//	scanf("%lld", &n);
+//	while (n != 1)
+//	{
+//		if (n == 1)
+//		{
+//			break;
+//		}
+//		if (n % 2 == 1)
+//		{
+//			printf("%lld*3+1=%lld\n", n, n * 3 + 1);
+//			n = n * 3 + 1;
+//		}
+//		if (n == 1)
+//		{
+//			break;
+//		}
+//		if (n % 2 == 0)
+//		{
+//			printf("%lld/2=%lld\n", n, n / 2);
+//			n = n / 2;
+//		}
+//		if (n == 1)
+//		{
+//			break;
+//		}
+//	}
+//	printf("End");
+//	return 0;
+//}
+
+//int main()
+//{
+//	double x=0,n=0,sum=0;
+//	scanf("%lf %lf", &x, &n);
+//	for (double i = 0; i <= n; i++)
+//	{
+//		sum += pow(x, i);
+//	}
+//	printf("%.2lf", sum);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n,sum=0;
+//	scanf("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if (i % 7 == 0 || i == 17 || i == 27 || i == 37 || i == 47 || i == 57 || i == 67 || (70 <= i) && (i <= 79) || i == 87 || i == 97)
+//		{
+//			;
+//		}
+//		else
+//		{
+//			sum += i * i;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//int main()
+//{
+//    int L, R, c, d, ans, i;
+//    scanf("%d%d", &L, &R);
+//    for (i = L; i <= R; i++)
+//    {
+//        c = i;
+//        while (c != 0)
+//        {
+//            d = c % 10;
+//            c = c / 10;
+//            if (d == 2)
+//            {
+//                ans++;
+//            }
+//        }
+//    }
+//    printf("%d", ans);
+//    return 0;
+//}
+
+//#include<stdio.h>
+//#include<math.h>
+//int main() 
+//{
+//
+//	return 0;
+//}
+
+#include <stdio.h>
+
+int 计算出现次数(int L, int R) {
+    int ans = 0;
+
+    for (int i = L; i <= R; i++) {
+        int 数字 = i;
+
+        while (数字 != 0) {
+            int 个位数 = 数字 % 10;
+            数字 = 数字 / 10;
+
+            if (个位数 == 2) {
+                ans++;
+            }
+        }
+    }
+
+    return ans;
+}
+
+int main() {
+    int L, R;
+    scanf("%d%d", &L, &R);
+
+    int 结果 = 计算出现次数(L, R);
+    printf("%d", 结果);
+
+    return 0;
 }
