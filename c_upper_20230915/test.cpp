@@ -5,7 +5,7 @@
 #include<windows.h>
 #include<iostream>
 #include<ctype.h>
-//using namespace std;
+using namespace std;
 //int main()
 //{
 //	//int a[4] = { 1,2,3,4 };
