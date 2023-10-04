@@ -334,11 +334,48 @@
 //
 //    return 0;
 //}
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d%d%d", &a, &b, &c);
+//	printf("%d", a + b * c);
+//	return 0;
+//}
+
 #include <stdio.h>
 int main()
 {
-	int a, b, c;
-	scanf("%d%d%d", &a, &b, &c);
-	printf("%d", a + b * c);
+	int a = 0, b = 0, f = 0, i = 0, j = 0;
+	char c;
+	scanf("%d %d %c %d", &a, &b, &c, &f);
+	if (f != 0)
+	{
+		for (i = 0; i < a; i++)
+		{
+			for (j = 0; j < b; j++)
+			{
+				printf("%c", c);
+			}
+			printf("\n");
+		}
+	}
+	else
+	{
+		for (i = 0; i < a; i++)
+		{
+			for (j = 0; j < b; j++)
+			{
+				if (i == 0 || i == a - 1 || j == 0 || j == b - 1)
+				{
+					printf("%c", c);
+				}
+				else
+				{
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+	}
 	return 0;
 }
