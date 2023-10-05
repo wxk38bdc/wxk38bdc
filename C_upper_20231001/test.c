@@ -467,35 +467,96 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int n = 0, i = 1, j = 1;
+//	scanf("%d", &n);
+//	int arr[5001] = { 1 };
+//	for (i = 1; i <= n; i++)
+//	{
+//		for (j = i; j <= n; j++)
+//		{
+//			if (j % i == 0)
+//			{
+//				if (arr[j] == 0)
+//				{
+//					arr[j] = 1;
+//				}
+//				else if (arr[j] == 1)
+//				{
+//					arr[j] = 0;
+//				}
+//			}
+//		}
+//	}
+//	for (i = 1; i <= n; i++)
+//	{
+//		if (arr[i] == 1)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[10001] = { 0 };
+//	int n = 0, i = 0;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int x = 0, count = 0;
+//	scanf("%d", &x);
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i] == x)
+//		{
+//			printf("%d", i);
+//			break;
+//		}
+//		count++;
+//	}
+//	if (count == n)
+//	{
+//		printf("-1");
+//	}
+//	return 0;
+//}
 #include <stdio.h>
+int get_max(int* arr,int n)
+{
+	int MAX = arr[0];
+	int i = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (arr[i] > MAX)
+		{
+			MAX = arr[i];
+		}
+	}
+	return MAX;
+}
 int main()
 {
-	int n = 0, i = 1, j = 1;
+	int n = 0, i = 0;
+	int arr[101] = { 0 };
 	scanf("%d", &n);
-	int arr[5001] = { 1 };
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		for (j = i; j <= n; j++)
+		scanf("%d", &arr[i]);
+	}
+	int MAX = get_max(arr,n);
+	int count = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (arr[i] != MAX)
 		{
-			if (j % i == 0)
-			{
-				if (arr[j] == 0)
-				{
-					arr[j] = 1;
-				}
-				else if (arr[j] == 1)
-				{
-					arr[j] = 0;
-				}
-			}
+			count += arr[i];
 		}
 	}
-	for (i = 1; i <= n; i++)
-	{
-		if (arr[i] == 1)
-		{
-			printf("%d ", i);
-		}
-	}
+	printf("%d", count);
 	return 0;
 }
