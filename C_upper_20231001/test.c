@@ -444,9 +444,58 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int n = 0, i = 0;
+//	scanf("%d", &n);
+//	int a[1001] = { 0 };
+//	int b[1001] = { 0 };
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &b[i]);
+//	}
+//	int count = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		count += a[i] * b[i];
+//	}
+//	printf("%d", count);
+//	return 0;
+//}
+
 #include <stdio.h>
 int main()
 {
-
+	int n = 0, i = 1, j = 1;
+	scanf("%d", &n);
+	int arr[5001] = { 1 };
+	for (i = 1; i <= n; i++)
+	{
+		for (j = i; j <= n; j++)
+		{
+			if (j % i == 0)
+			{
+				if (arr[j] == 0)
+				{
+					arr[j] = 1;
+				}
+				else if (arr[j] == 1)
+				{
+					arr[j] = 0;
+				}
+			}
+		}
+	}
+	for (i = 1; i <= n; i++)
+	{
+		if (arr[i] == 1)
+		{
+			printf("%d ", i);
+		}
+	}
 	return 0;
 }
