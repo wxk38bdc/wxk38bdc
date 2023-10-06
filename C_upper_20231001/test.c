@@ -525,38 +525,205 @@
 //	}
 //	return 0;
 //}
+
+//int get_max(int* arr,int n)
+//{
+//	int MAX = arr[0];
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i] > MAX)
+//		{
+//			MAX = arr[i];
+//		}
+//	}
+//	return MAX;
+//}
+//int main()
+//{
+//	int n = 0, i = 0;
+//	int arr[101] = { 0 };
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int MAX = get_max(arr,n);
+//	int count = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i] != MAX)
+//		{
+//			count += arr[i];
+//		}
+//	}
+//	printf("%d", count);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//double get_max(double* arr, int n)
+//{
+//    double MAX = arr[0];
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] > MAX)
+//        {
+//            MAX = arr[i];
+//        }
+//    }
+//    return MAX;
+//}
+//double get_min(double* arr, int n)
+//{
+//    double MIN = arr[0];
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] < MIN)
+//        {
+//            MIN = arr[i];
+//        }
+//    }
+//    return MIN;
+//}
+//double jueduizhi(double n)
+//{
+//    if (n >= 0)
+//    {
+//        return n;
+//    }
+//    else
+//    {
+//        return (-n);
+//    }
+//}
+//int main()
+//{
+//    int n = 0, i = 0;
+//    scanf("%d", &n);
+//    double arr[301] = { 0.0 };
+//    double sum = 0.0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%lf", &arr[i]);
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        sum += arr[i];
+//    }
+//    double MAX = get_max(arr, n);
+//    double MIN = get_min(arr, n);
+//    double ave = (sum - MAX - MIN) / (n - 2);
+//    printf("%.2lf ",ave);
+//    double wucha[300] = { 0.0 };
+//    for (i = 0; i < n; i++)
+//    {
+//        if ((arr[i] != MAX) && (arr[i] != MIN))
+//        {
+//            wucha[i] = jueduizhi(arr[i] - ave);
+//        }
+//    }
+//
+//    printf("%.2lf", get_max(wucha, n));
+//    return 0;
+//}
+
+//#include <string.h>  // 添加这行头文件
+////本题坑人之处：只需要去掉一个最大值/最小值，而不是所有最大值/最小值！
+//double get_max(double* arr, int n)
+//{
+//    double MAX = arr[0];
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] > MAX)
+//        {
+//            MAX = arr[i];
+//        }
+//    }
+//    return MAX;
+//}
+//
+//double get_min(double* arr, int n)
+//{
+//    double MIN = arr[0];
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] < MIN)
+//        {
+//            MIN = arr[i];
+//        }
+//    }
+//    return MIN;
+//}
+//
+//double jueduizhi(double n)
+//{
+//    if (n >= 0)
+//    {
+//        return n;
+//    }
+//    else
+//    {
+//        return (-n);
+//    }
+//}
+//
+//int main()
+//{
+//    int n = 0, i = 0;
+//    int flag1 = 0, flag2 = 0;
+//    scanf("%d", &n);
+//    double arr[301] = { 0.0 };
+//    double sum = 0.0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%lf", &arr[i]);
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        sum += arr[i];
+//    }
+//    double MAX = get_max(arr, n);
+//    double MIN = get_min(arr, n);
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] == MAX)
+//        {
+//            flag1 = i;
+//        }
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] == MIN)
+//        {
+//            flag2 = i;
+//        }
+//    }
+//    double ave = (sum - MAX - MIN) / (n - 2);
+//    printf("%.2lf ", ave);
+//
+//    // 初始化 wucha 数组
+//    double wucha[300] = { 0.0 };
+//    memset(wucha, 0, sizeof(wucha));
+//
+//    for (i = 0; i < n; i++)
+//    {
+//        if ((i!=flag1) && (i!=flag2))
+//        {
+//            wucha[i] = jueduizhi(arr[i] - ave);
+//        }
+//    }
+//    printf("%.2lf", get_max(wucha, n));
+//    return 0;
+//}
+
 #include <stdio.h>
-int get_max(int* arr,int n)
-{
-	int MAX = arr[0];
-	int i = 0;
-	for (i = 0; i < n; i++)
-	{
-		if (arr[i] > MAX)
-		{
-			MAX = arr[i];
-		}
-	}
-	return MAX;
-}
 int main()
 {
-	int n = 0, i = 0;
-	int arr[101] = { 0 };
-	scanf("%d", &n);
-	for (i = 0; i < n; i++)
-	{
-		scanf("%d", &arr[i]);
-	}
-	int MAX = get_max(arr,n);
-	int count = 0;
-	for (i = 0; i < n; i++)
-	{
-		if (arr[i] != MAX)
-		{
-			count += arr[i];
-		}
-	}
-	printf("%d", count);
+
 	return 0;
 }
