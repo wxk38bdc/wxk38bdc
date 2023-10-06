@@ -163,8 +163,6 @@
 //	printf("%d", a);
 //}
 
-#include <stdio.h>
-
 //int main()
 //{
 //	
@@ -285,11 +283,11 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-int main()//B2067药房管理
-{
-	int m = 0, n = 0;
-	scanf("%d%d", &m, &n);
-
-	return 0;
-}
+//#include <stdio.h>
+//int main()//B2067药房管理
+//{
+//	int m = 0, n = 0;
+//	scanf("%d%d", &m, &n);
+//
+//	return 0;
+//}
