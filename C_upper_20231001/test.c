@@ -982,6 +982,41 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int m = 0, n = 0,i = 0, j = 0;
+//	scanf("%d %d", &m, &n);
+//	int arr1[101][101] = { 0 };
+//	int arr2[101][101] = { 0 };
+//	for (i = 0; i < m; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//		{
+//			scanf("%d", &arr1[i][j]);
+//		}
+//	}
+//	for (i = 0; i < m; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//		{
+//			scanf("%d", &arr2[i][j]);
+//		}
+//	}
+//	double a = 0;
+//	for (i = 0; i < m; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//		{
+//			if (arr1[i][j] == arr2[i][j])
+//			{
+//				a++;
+//			}
+//		}
+//	}
+//	printf("%.2lf", a / (m * n) * 100.0);
+//	return 0;
+//}
+
 #include<stdio.h>
 int main()
 {
