@@ -1,4 +1,2 @@
-﻿  test.c
-D:\code2023\c-learning\NKU_cpp_learning\test.c(267,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\code2023\c-learning\NKU_cpp_learning\test.c(271,33): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+﻿  test01.cpp
   NKU_cpp_learning.vcxproj -> D:\code2023\c-learning\NKU_cpp_learning\Debug\NKU_cpp_learning.exe
