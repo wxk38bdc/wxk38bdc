@@ -97,25 +97,60 @@
 //}
 
 //输出逆时针旋转90度的矩阵
+//int main()
+//{
+//	int n,m, i, j;
+//	scanf("%d %d", &n, &m);
+//	int a[101][101];
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			scanf("%d", &a[i][j]);
+//		}
+//	}
+//	for(j = m-1; j >= 0; j--)
+//	{
+//		for(i=0;i<n;i++)
+//		{
+//			printf("%d ", a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//像素点模糊化处理
+#include <stdio.h>
 int main()
 {
 	int n,m, i, j;
 	scanf("%d %d", &n, &m);
-	int a[101][101];
-	for(i=0;i<n;i++)
+	double a[101][101];
+	for (i = 0; i < n; i++)
 	{
-		for(j=0;j<m;j++)
+		for (j = 0; j < m; j++)
 		{
-			scanf("%d", &a[i][j]);
+			scanf("%lf", &a[i][j]);
 		}
 	}
-	for(j = m-1; j >= 0; j--)
+	int k = 0;
+	for (i = 0; i < n; i++)
 	{
-		for(i=0;i<n;i++)
+		for (j = 0; j < m; j++)
 		{
-			printf("%d ", a[i][j]);
+			if (i == 0 || j == 0 || i == n - 1 || j == m - 1)
+			{
+				printf("%.0lf ", a[i][j]);
+			}
+			else
+			{
+				printf("%.0lf ",(a[i][j]+a[i-1][j]+a[i+1][j]+a[i][j-1]+a[i][j+1])/5*1.0);
+			}
+			
 		}
 		printf("\n");
 	}
+	//printf("%.0lf", 5.6);
 	return 0;
 }
