@@ -96,3 +96,26 @@
 //	return 0;
 //}
 
+//输出逆时针旋转90度的矩阵
+int main()
+{
+	int n,m, i, j;
+	scanf("%d %d", &n, &m);
+	int a[101][101];
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			scanf("%d", &a[i][j]);
+		}
+	}
+	for(j = m-1; j >= 0; j--)
+	{
+		for(i=0;i<n;i++)
+		{
+			printf("%d ", a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
