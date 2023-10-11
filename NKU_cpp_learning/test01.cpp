@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>//i-o-stream 输入输出流
 #include<stdio.h>
 #include<cmath>
@@ -69,37 +69,38 @@ using namespace std;
 //	return 0;
 //}
 
-int bubble_sort(int arr[], int len)
-{
-	int temp;
-	for (int i = 0; i < len - 1; i++)
-	{
-		for (int j = 0; j < len - 1 - i; j++)
-		{
-			if (arr[j] < arr[j + 1])
-			{
-				temp = arr[j + 1];
-				arr[j + 1] = arr[j];
-				arr[j] = temp;
-			}
+//int bubble_sort(int arr[], int len)
+//{
+//	int temp;
+//	for (int i = 0; i < len - 1; i++)
+//	{
+//		for (int j = 0; j < len - 1 - i; j++)
+//		{
+//			if (arr[j] < arr[j + 1])
+//			{
+//				temp = arr[j + 1];
+//				arr[j + 1] = arr[j];
+//				arr[j] = temp;
+//			}
+//
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[100];
+//	int len=0;
+//	//输入数组
+//	for (int i = 0; i < 100; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	while (cin >> arr[len])
+//	{
+//		len++;
+//	}
+//	bubble_sort(arr, len);
+//	return 0;
+//}
 
-		}
-	}
-	return 0;
-}
-int main()
-{
-	int arr[100];
-	int len=0;
-	//输入数组
-	for (int i = 0; i < 100; i++)
-	{
-		scanf("%d", &arr[i]);
-	}
-	while (cin >> arr[len])
-	{
-		len++;
-	}
-	bubble_sort(arr, len);
-	return 0;
-}

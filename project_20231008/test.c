@@ -243,24 +243,24 @@
 //}
 
 //十进制数转换为二进制数
-//#include <stdio.h>
-//int main()
-//{
-//	int a, i=0;
-//	int arr[100];
-//	scanf("%d",&a);
-//	while(a)
-//	{
-//		arr[i]= a % 2;
-//		a /= 2;
-//		i++;
-//	}
-//	for(int j=i-1;j>=0;j--)
-//	{
-//		printf("%d", arr[j]);
-//	}
-//	return 0;
-//}
+#include <stdio.h>
+int main()
+{
+	int a, i=0;
+	int arr[100];
+	scanf("%d",&a);
+	while(a)
+	{
+		arr[i]= a % 2;
+		a /= 2;
+		i++;
+	}
+	for(int j=i-1;j>=0;j--)
+	{
+		printf("%d", arr[j]);
+	}
+	return 0;
+}
 
 //#include <string.h>
 //int main()
@@ -269,8 +269,9 @@
 //    return 0;
 //}
 
-#include <stdio.h>
-int main()
-{
-	return 0;
-}
+//#include <stdio.h>
+//int main()
+//{
+//	return 0;
+//}
+

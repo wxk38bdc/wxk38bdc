@@ -291,3 +291,208 @@
 //
 //	return 0;
 //}
+
+//#include<string.h>
+////输入一行字符，统计出其中数字字符的个数
+//int main()
+//{
+//	char arr[300];
+//	scanf("%[^\n]%*c", arr);
+//	int count = 0;
+//	int m = 0;
+//	m = strlen(arr);
+//	for (int i = 0; i <m ; i++)
+//	{
+//		if (arr[i] >= '0' && arr[i] <= '9')
+//		{
+//			count++;
+//		}
+//	}
+//	printf("%d", count);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	//创建数组并输入
+//	char arr[1200];
+//	scanf(%s,arr);
+//	int sz = strlen(arr);
+//	int i = 0;
+//	int str[26] = { 0 };
+//	//遍历数组，统计每个字母出现的次数
+//	for (i = 0; i < sz; i++)
+//	{
+//		str[(int)arr[i] - 97] += 1;
+//	}
+//	//遍历数组，找到第一个出现一次的字母
+//	int flag = 0;
+//	for (i = 0; i <sz; i++)
+//	{
+//		if(str[(int)arr[i] - 97] ==1)
+//		{
+//			printf("%c", arr[i]);
+//			flag = 1;
+//			break;
+//		}
+//	}
+//	if (flag == 0)
+//		printf("no");
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[1000];
+//	char arr2[1000];
+//	double a;
+//	scanf("%lf", &a);
+//	scanf("%s", arr1);
+//	scanf("%s", arr2);
+//	int i = 0, count = 0;
+//	int sz = strlen(arr1);
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (arr1[i] == arr2[i])
+//		{
+//			count++;
+//		}
+//	}
+//	double b = 1.0 * count / sz;
+//	if (b >= a)
+//	{
+//		printf("yes");
+//	}
+//	else
+//	{
+//		printf("no");
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n, i;
+//	scanf("%d", &n);
+//	for (i = 0; i < 2 * n; i+=2)
+//	{
+//		char arr1[10]={0};
+//		char arr2[10]={0};
+//		scanf("%s", arr1);
+//		scanf("%s", arr2);
+//		if (strlen(arr1) == strlen(arr2))
+//		{
+//			printf("Tie\n");
+//		}
+//		else if (strlen(arr1) == 4 && strlen(arr2) == 8 || strlen(arr1) == 8 && strlen(arr2) == 5 || strlen(arr1) == 5 && strlen(arr2) == 4)
+//		{
+//			printf("Player1\n");
+//		}
+//		else
+//		{
+//			printf("Player2\n");
+//		}
+//	}
+//	return 0;
+//}
+
+//void reverse(char arr[], int len)
+//{
+//	int i = 0;
+//	for (i = 0; i < len / 2; i++)
+//	{
+//		char tmp = arr[i];
+//		arr[i] = arr[len - 1 - i];
+//		arr[len - 1 - i] = tmp;
+//	}
+//}
+//int main()
+//{
+//	char arr[60];
+//	scanf("%s", arr);
+//	int len = strlen(arr);
+//	int i = 0;
+//	for (i = 0; i < len; i++)
+//	{
+//		if (arr[i] >= 'a' && arr[i] <= 'z')
+//		{
+//			arr[i] = (int)arr[i] - 32;
+//		}
+//		else if (arr[i] >= 'A' && arr[i] <= 'Z')
+//		{
+//			arr[i] = (int)arr[i] + 32;
+//		}
+//	}
+//	reverse(arr, len);
+//	for (i = 0; i < len; i++)
+//	{
+//		if (arr[i] >= 'a' && arr[i] <= 'w'|| arr[i] >= 'A' && arr[i] <= 'W')
+//		{
+//			arr[i] = arr[i] +3;
+//		}
+//		else
+//		{
+//			arr[i]= arr[i] - 23;
+//		}
+//	}
+//	printf("%s", arr);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char s1[23];
+//	char s2[23];
+//	scanf("%s", s1);
+//	scanf("%s", s2);
+//	if (strstr(s1, s2) != NULL)
+//	{
+//		printf("%s is substring of %s",s2,s1);
+//	}
+//	else if (strstr(s2, s1) != NULL)
+//	{
+//		printf("%s is substring of %s", s1, s2);
+//	}
+//	else
+//	{
+//		printf("No substring");
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr[35];
+//	scanf("%s", arr);
+//	int len = strlen(arr);
+//	if (arr[len - 2] == 'e' && arr[len - 1] == 'r')
+//	{
+//		arr[len - 2] = '\0';
+//		printf("%s", arr);
+//	}
+//	else if (arr[len - 2] == 'l' && arr[len - 1] == 'y')
+//	{
+//		arr[len - 2] = '\0';
+//		printf("%s", arr);
+//	}
+//	else if (arr[len - 3] == 'i' && arr[len - 2] == 'n' && arr[len - 1] == 'g')
+//	{
+//		arr[len - 3] = '\0';
+//		printf("%s", arr);
+//	}
+//	else
+//	{
+//		printf("%s", arr);
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+
+	return 0;
+}
