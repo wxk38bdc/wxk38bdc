@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>//i-o-stream ÊäÈëÊä³öÁ÷
-#include<stdio.h>
+#include<cstdio>
 #include<cmath>
 using namespace std;
 
@@ -104,3 +104,62 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	int arr[100];
+//	for (int i = 0; i < n; i++)
+//	{
+//		cin >> arr[i];
+//	}
+//	int max = arr[0];
+//	int min = arr[0];
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (max < arr[i])
+//		{
+//			max = arr[i];
+//		}
+//		if (min > arr[i])
+//		{
+//			min = arr[i];
+//		}
+//	}
+//	cout << max << " " << min;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n, mx;
+//	bool first = true;
+//	while(cin>>n)
+//	{
+//		if (first)
+//		{
+//			mx = n;
+//			first = false;
+//		}
+//		else
+//		{
+//			if (mx < n)
+//			{
+//				mx = n;
+//			}
+//		}
+//	 }
+//	cout << mx;
+//	return 0;
+//}
+
+//int main()
+//{
+//	enum color_set{ red, yellow, blue, white, black };
+//	color_set a = red;
+//	if (a == red)
+//	{
+//		cout << a;
+//	}
+//	return 0;
+//}

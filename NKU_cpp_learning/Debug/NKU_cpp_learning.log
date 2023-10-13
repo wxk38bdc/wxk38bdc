@@ -1,2 +1,2 @@
 ﻿  test.c
-  NKU_cpp_learning.vcxproj -> D:\code2023\c-learning\NKU_cpp_learning\Debug\NKU_cpp_learning.exe
+D:\code2023\c-learning\NKU_cpp_learning\test.c(522,16): error C2065: “a”: 未声明的标识符
