@@ -317,8 +317,52 @@
 //	return 0;
 //}
 
+////Ğ´³östrµÄpĞÍ±àÂë´®
+//int main()
+//{
+//	char str[1001] = { 0 };
+//	scanf("%s", str);
+//	int flag = 0;
+//	int i = 0;
+//	int len = strlen(str);
+//	for (i = 0; i < len; i++)
+//	{
+//		if (str[i] == str[i + 1])
+//		{
+//			flag++;
+//		}
+//		else
+//		{
+//			printf("%d%c", flag + 1, str[i]);
+//			flag = 0;
+//		}
+//	}
+//	return 0;
+//}
+
 #include <stdio.h>
+#include <string.h>
 int main()
 {
+	char arr[101] = { 0 };
+	scanf("%s", arr);
+	int len = strlen(arr);
+	int right= len - 1;
+	int left = 0;
+	int flag = 0;
+	while (left < right)
+	{
+		if (arr[left] != arr[right])
+		{
+			flag = 1;
+			break;
+		}
+		left++;
+		right--;
+	}
+	if(flag== 0)
+		printf("yes");
+	else
+		printf("no");
 	return 0;
 }
