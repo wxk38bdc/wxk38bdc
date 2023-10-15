@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @wxk38bdc
-- 👀 I’m interested in c++ learning
-- 🌱 I’m currently learning basic knowledge of c++
+- 👀 I’m interested in c++ learning as well as Python learning
+- 🌱 I’m currently learning basic knowledge of c++ and Python
 - 💞️ I’m a freshman in computer science
 - 📫 How to reach me: wxk527191@gmail.com
 
